@@ -12,10 +12,9 @@ module.exports = function(grunt) {
 
     sass: {
       dist: {
+        options: { sourcemap: 'none' },
         files: {
-          '_styles.css' : '_styles.scss',
-          '_layout.css' : '_layout.scss',
-          'base.css'  : 'base.scss'
+          'style.css' : 'style.scss'
         }
       }
     },
