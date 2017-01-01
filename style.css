@@ -3930,3 +3930,36 @@ svg:hover {
     .github svg:hover #gh {
       fill: #f02755 !important;
       transition: all 0.3s; }
+
+.inner-container {
+  margin: 15vh auto;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 100px 40px rgba(0, 0, 0, 0.4); }
+  .inner-container h1 {
+    color: white;
+    font-size: 96px;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-weight: 700;
+    text-align: center; }
+
+.button {
+  color: #f02755;
+  margin: 2em 1em; }
+  .button:hover, .button:focus {
+    color: #f02755;
+    box-shadow: 0px 0px 20px 4px rgba(255, 255, 255, 0.3);
+    background-color: white;
+    transform: translateY(-2px);
+    transition: transform 0.2s ease-in-out; }
+
+.button.is-primary {
+  color: white;
+  background-color: #f02755; }
+  .button.is-primary:hover, .button.is-primary:focus {
+    box-shadow: 0px 0px 20px 4px rgba(240, 39, 85, 0.5);
+    background-color: #f02755; }
+
+.button-container {
+  margin: 0 auto;
+  text-align: center; }

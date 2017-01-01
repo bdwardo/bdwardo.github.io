@@ -1,6 +1,7 @@
 @import "node_modules/bulma/bulma";
 
 $red: #f02755;
+$yellow: #ffb32c;
 $body-copy: #4a4a4a;
 
 
@@ -64,4 +65,51 @@ svg:hover {
             transition: all 0.3s;
         }
     }
+}
+
+.inner-container {
+    margin: 15vh auto;
+    vertical-align: middle;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 100px 40px rgba(0, 0, 0, 0.4);
+    h1 {
+        color: $white;
+        font-size: $size-1 * 2;
+        font-family: 'Roboto', Helvetica, sans-serif;
+        font-weight: $weight-bold;
+        text-align: center;
+    }
+}
+
+.button {
+    color: $red;
+    margin: 2em 1em;
+    &:hover, &:focus {
+        color: $red;
+        box-shadow: 0px 0px 20px 4px rgba(255,255,255,0.3);
+        background-color: $white;
+        transform: translateY(-2px);
+        transition: transform 0.2s ease-in-out;
+    }
+}
+
+.button.is-primary {
+      color: $white;
+      background-color: $red;
+      &:hover, &:focus {
+          box-shadow: 0px 0px 20px 4px rgba(240,39,85,0.5);
+          background-color: $red;
+      }
+}
+
+// .is-primary {
+//     background-color: $red !important;
+//     &:hover {
+//         background-color: lighten($red, 10%);
+//     }
+// }
+
+.button-container {
+    margin: 0 auto;
+    text-align: center;
 }
