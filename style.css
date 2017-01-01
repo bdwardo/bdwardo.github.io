@@ -3887,10 +3887,28 @@ body {
   height: 100vh; }
 
 nav {
+  position: relative; }
+
+.logo {
   padding: 2em; }
 
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 1em 2em;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%; }
+
+a.footer-links {
+  color: #4a4a4a; }
+  a.footer-links:hover {
+    color: #f02755;
+    transition: all 0.3s; }
+
 .bg {
-  background-image: url(img/bg.jpg);
+  background-image: url(img/bg.gif);
   background-repeat: no-repeat;
   position: relative;
   margin: 0 auto;
@@ -3901,3 +3919,14 @@ nav {
 svg:hover {
   transform: scale(1.08);
   transition: all 0.3s; }
+
+.github {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  right: 0; }
+  .github svg:hover {
+    transform: none; }
+    .github svg:hover #gh {
+      fill: #f02755 !important;
+      transition: all 0.3s; }

@@ -1,5 +1,9 @@
 @import "node_modules/bulma/bulma";
 
+$red: #f02755;
+$body-copy: #4a4a4a;
+
+
 body {
     position: relative;
     margin: 0 auto;
@@ -8,11 +12,33 @@ body {
 }
 
 nav {
+    position: relative;
+}
+
+.logo {
     padding: 2em;
 }
 
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 1em 2em;
+    display: inline-block;
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+}
+
+a.footer-links {
+    color: $body-copy;
+    &:hover {
+        color: $red;
+        transition: all 0.3s;
+    }
+}
+
 .bg {
-    background-image: url( img/bg.jpg );
+    background-image: url( img/bg.gif );
     background-repeat: no-repeat;
     position: relative;
     margin: 0 auto;
@@ -24,4 +50,18 @@ nav {
 svg:hover {
     transform: scale(1.08);
     transition: all 0.3s;
+}
+
+.github {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    svg:hover {
+        transform: none;
+        #gh {
+            fill: $red !important;
+            transition: all 0.3s;
+        }
+    }
 }
