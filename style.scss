@@ -1,6 +1,6 @@
 @import "node_modules/bulma/bulma";
 
-$red: #f02755;
+$red: #f02654;
 $yellow: #ffb32c;
 $body-copy: #4a4a4a;
 
@@ -68,23 +68,32 @@ svg:hover {
 }
 
 .inner-container {
-    margin: 15vh auto;
+    margin: 10vh auto 0;
     vertical-align: middle;
     background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 0px 0px 100px 40px rgba(0, 0, 0, 0.4);
-    h1 {
+    h1, h4 {
         color: $white;
-        font-size: $size-1 * 2;
         font-family: 'Roboto', Helvetica, sans-serif;
         font-weight: $weight-bold;
         text-align: center;
+        line-height: 1.45;
     }
+}
+
+h1 {
+    font-size: $size-2 * 2;
+}
+
+h4 {
+    font-size: $size-2;
 }
 
 .button {
     color: $red;
     margin: 2em 1em;
-    &:hover, &:focus {
+    background-color: $red;
+    &:hover {
         color: $red;
         box-shadow: 0px 0px 20px 4px rgba(255,255,255,0.3);
         background-color: $white;
@@ -96,20 +105,200 @@ svg:hover {
 .button.is-primary {
       color: $white;
       background-color: $red;
-      &:hover, &:focus {
+      padding: 2em;
+      border-radius: 10px;
+      // text-transform: uppercase;
+      font-weight: bold;
+      &:hover {
           box-shadow: 0px 0px 20px 4px rgba(240,39,85,0.5);
           background-color: $red;
       }
+      &:focus {
+          background-color: $red;
+      }
 }
-
-// .is-primary {
-//     background-color: $red !important;
-//     &:hover {
-//         background-color: lighten($red, 10%);
-//     }
-// }
 
 .button-container {
     margin: 0 auto;
     text-align: center;
 }
+
+
+
+h1 {
+    padding-bottom: 1em;
+}
+
+
+.top {
+  margin-bottom: 1em;
+}
+
+.container {
+    max-width: 1400px !important;
+}
+
+
+.conditional {
+  margin: 1em 0 0.5em;
+  // border-top: 2px dotted #eee;
+  padding: 1em 0;
+  color: $white;
+  font-size: .9em;
+  // background-color: rgba(255,255,255,0.1);
+}
+.conditional > .conditional {
+  color: $red;
+}
+
+#last-div {
+    display: none;
+}
+
+
+.lightbox {
+  display: none;
+  text-align: center;
+  padding: 1.5em 3em 0;
+  background: transparent;
+  margin: 2em auto 0;
+  font: 24px/30px 'Roboto', Arial, Verdana, serif;
+}
+
+label {
+  color: $white;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 0.5em;
+}
+
+label + label {
+  margin-left: 1em;
+}
+
+input + span{
+	position: absolute;
+	left: 0;
+  top: 2px;
+	width: 24px;
+	height: 24px;
+  border: 2px solid $red;
+}
+
+input[type=radio] + span {
+  border-radius: 50%;
+}
+
+input[type=radio]:checked + span {
+  background: rgba(240, 38, 84,1);
+  background: -moz-radial-gradient(center, ellipse cover, rgba(240, 38, 84,1) 44%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 46%, rgba(255,255,255,1) 55%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(44%, rgba(240, 38, 84,1)), color-stop(45%, rgba(255,255,255,1)), color-stop(46%, rgba(255,255,255,1)), color-stop(55%, rgba(255,255,255,1)));
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(240, 38, 84,1) 44%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 46%, rgba(255,255,255,1) 55%);
+  background: -o-radial-gradient(center, ellipse cover, rgba(240, 38, 84,1) 44%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 46%, rgba(255,255,255,1) 55%);
+  background: -ms-radial-gradient(center, ellipse cover, rgba(240, 38, 84,1) 44%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 46%, rgba(255,255,255,1) 55%);
+  background: radial-gradient(ellipse at center, rgba(240, 38, 84,1) 44%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 46%, rgba(255,255,255,1) 55%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f02654', endColorstr='#ffffff', GradientType=1 );
+}
+
+input[type=checkbox]:checked + span:after {
+  content: "\00d7";
+  font-weight: bold;
+  position: absolute;
+  top: -7px;
+  left: 1px;
+  font-size: 20px;
+  color: $red;
+}
+
+input[type=radio],
+input[type=checkbox] {
+	/*hide the radio button*/
+	filter:alpha(opacity=0);
+	-moz-opacity:0;
+	-khtml-opacity: 0;
+	opacity: 0;
+}
+
+select,
+input[type=text] {
+  border-radius: 5px;
+  padding: 6px 10px;
+  border: 2px solid $red;
+  font-color: #666;
+  font-size: 15px;
+}
+
+.conditional img {
+    max-height: 100%;
+    display: inline-block;
+    position: relative;
+    margin: 1em;
+}
+
+.conditional, .poster-container {
+
+    h4 {
+        padding-bottom: 1em;
+    }
+
+    a.movie-detail {
+
+        img:hover {
+            box-shadow: 0px 0px 20px 4px rgba(240,39,85,0.5);
+            transform: scale(1.1);
+            transition: all 0.3s;
+        }
+    }
+}
+
+
+.poster-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    #template {
+        width: 350px;
+        margin: 0 1em;
+    }
+}
+
+#mobile-logo {
+    display: none;
+}
+
+
+@media all and (max-width: 480px) {
+
+    .github {
+        display: none;
+    }
+
+    #main-logo {
+        display: none;
+    }
+
+    #mobile-logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    nav {
+        background-color: $red;
+
+        .logo {
+            padding: 0.25em;
+        }
+    }
+
+}
+
+// #frame{max-width:620px;width:auto;border:1px solid #ccc;background:#fff;padding:10px;margin:3px;}
+// h1{font:normal bold 2em/1.8em "Helvetica Neue", Helvetica, Arial, sans-serif;text-align:left;border-bottom:1px solid #999;padding:0;width:auto}
+// h2{font:italic bold 1.3em/1.2em "Helvetica Neue", Helvetica, Arial, sans-serif;padding:0;text-align:center;margin:20px 0;}
+// p.pager{margin:5px 0 5px; font:bold 1em/1em "Helvetica Neue", Helvetica, Arial, sans-serif;color:#999;}
+// img.question-image{display:block;max-width:250px;margin:10px auto;border:1px solid #ccc;width:100%;height:auto;}
+// #choice-block{display:block;list-style:none;margin:0;padding:0;}
+// #submitbutton{background:#5a6b8c;}
+// #submitbutton:hover{background:#7b8da6;}
+// #explanation{margin:0 auto;padding:20px;width:75%;}
+// .choice-box{display:block;text-align:center;margin:8px auto;padding:10px 0;border:1px solid #666;cursor:pointer;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;}
