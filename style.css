@@ -3880,11 +3880,12 @@ a.panel-block:hover {
       .footer a:not(.icon):hover, .footer a:visited:not(.icon):hover {
         border-bottom-color: #00d1b2; }
 
-body {
-  position: relative;
+* {
+  margin: 0; }
+
+html, body {
   margin: 0 auto;
-  width: 100%;
-  height: 100vh; }
+  height: 100%; }
 
 nav {
   position: relative; }
@@ -3893,13 +3894,12 @@ nav {
   padding: 2em; }
 
 footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
   padding: 1em 2em;
-  display: inline-block;
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 100%; }
+  display: block;
+  background-color: #000;
+  width: 100%;
+  position: absolute;
+  bottom: 0; }
 
 a.footer-links {
   color: #4a4a4a; }
@@ -3907,14 +3907,16 @@ a.footer-links {
     color: #f02654;
     transition: all 0.3s; }
 
+.content-wrapper {
+  min-height: 100%; }
+
 .bg {
-  background-image: url(img/bg.gif);
+  background: url("img/bg.gif");
   background-repeat: no-repeat;
-  position: relative;
   margin: 0 auto;
-  height: 100%;
-  max-width: 100%;
-  background-size: cover; }
+  height: 100vh;
+  background-size: cover;
+  overflow: hidden; }
 
 svg:hover {
   transform: scale(1.08);
@@ -3932,7 +3934,7 @@ svg:hover {
       transition: all 0.3s; }
 
 .inner-container {
-  margin: 10vh auto 0;
+  margin: 0 auto;
   vertical-align: middle;
   background-color: rgba(0, 0, 0, 0.4);
   box-shadow: 0px 0px 100px 40px rgba(0, 0, 0, 0.4); }
@@ -3944,10 +3946,10 @@ svg:hover {
     line-height: 1.45; }
 
 h1 {
-  font-size: 80px; }
+  font-size: 2rem; }
 
 h4 {
-  font-size: 40px; }
+  font-size: 2rem; }
 
 .button {
   color: #f02654;
@@ -4000,9 +4002,9 @@ h1 {
 .lightbox {
   display: none;
   text-align: center;
-  padding: 1.5em 3em 0;
+  padding: 0 3em;
   background: transparent;
-  margin: 2em auto 0;
+  margin: 0 auto;
   font: 24px/30px 'Roboto', Arial, Verdana, serif; }
 
 label {
@@ -4062,9 +4064,11 @@ input[type=text] {
 
 .conditional img {
   max-height: 100%;
+  max-width: 350px;
+  width: 100%;
   display: inline-block;
   position: relative;
-  margin: 1em; }
+  border-radius: 4px; }
 
 .conditional h4, .poster-container h4 {
   padding-bottom: 1em; }
@@ -4074,11 +4078,11 @@ input[type=text] {
   transition: all 0.3s; }
 
 .poster-container {
-  display: flex;
-  flex-wrap: wrap; }
+  display: table;
+  margin: 0 auto; }
   .poster-container #template {
-    width: 350px;
-    margin: 0 1em; }
+    display: table-cell;
+    padding: 2vw; }
 
 #mobile-logo {
   display: none; }

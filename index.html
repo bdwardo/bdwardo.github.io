@@ -16,6 +16,7 @@
 </head>
 
 <body>
+  <div class="content-wrapper">
     <div class="bg">
         <nav>
             <div class="logo">
@@ -158,9 +159,7 @@
         <div class="container">
             <div id="app" class="inner-container">
                 <div class="hide">
-                  <div class="container">
-
-</div>
+                  <div class="container"></div>
                     <div id="lightbox1" class="lightbox">
                         <div class="top question1">
                             <h1>I'm a ________ .</h1>
@@ -212,7 +211,6 @@
                             <label><input type="radio" name="example3" value="scifi-nerd" id="search"><span></span> Pepsi</label>
                             <label><input type="radio" name="example3" value="scifi-comedy"><span></span> Coca Cola</label>
                             </div>
-                            <div>
                             <div id="results">
                                 <div id="container" class="poster-container">
                                   <div id="template">
@@ -220,8 +218,7 @@
                                   </div>
                                 </div>
                             </div>
-                          </div>
-                            <div class="conditional" data-cond-option="example3" data-cond-value="scifi-nerd">
+                            <!-- <div class="conditional" data-cond-option="example3" data-cond-value="scifi-nerd">
                             <h4>You might be interested in one of these...</h4>
                             <a href="#" class="movie-detail"><img src="https://image.tmdb.org/t/p/original/m0UDkSPoVkmNfXFR9FN13yewy4B.jpg" /></a>
                             <a href="#" class="movie-detail"><img src="https://image.tmdb.org/t/p/original/vZpB8ezB1IqpxI9rx553TuGwDzJ.jpg" /></a>
@@ -232,7 +229,7 @@
                             <a href="#" class="movie-detail"><img src="https://image.tmdb.org/t/p/original/pTpxQB1N0waaSc3OSn0e9oc8kx9.jpg" /></a>
                             <a href="#" class="movie-detail"><img src="https://image.tmdb.org/t/p/original/fOb4cJMhnZ11BoHNUii3Vcfo3XU.jpg" /></a>
                             <a href="#" class="movie-detail"><img src="https://image.tmdb.org/t/p/original/l9hrvXyGq19f6jPRZhSVRibTMwW.jpg" /></a>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="conditional" data-cond-option="example1" data-cond-value="action">
                             <p>Interesting. Which would you have lunch with?</p>
@@ -303,17 +300,18 @@
                 </div>
             </div> -->
         </div>
-        <footer>
-              <div>
-              <span>&copy; 2016 Reel Feels</span>
-              <span>&nbsp;|&nbsp;</span>
-              <a class="footer-links" href="mailto:bdwardo@gmail.com">Contact</a>
-              <span>&nbsp;|&nbsp;</span>
-              <a class="footer-links" href="https://www.themoviedb.org">API</a>
-            </span>
-              </div>
-        </footer>
     </div>
+  </div>
+    <footer>
+          <div>
+          <span>&copy; 2016 Reel Feels</span>
+          <span>&nbsp;|&nbsp;</span>
+          <a class="footer-links" href="mailto:bdwardo@gmail.com">Contact</a>
+          <span>&nbsp;|&nbsp;</span>
+          <a class="footer-links" href="https://www.themoviedb.org">API</a>
+        </span>
+          </div>
+    </footer>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 <script src="js/moviedb.js"></script>
