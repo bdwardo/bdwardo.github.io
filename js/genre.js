@@ -31,20 +31,39 @@ $(document).ready(function() {
 
 
 
+    // function someFuntion(){
+    //
+
+    // }
+
+
+
     // var urls = ["https://api.themoviedb.org/3/genre/" + action + "/movies?api_key=3b870b8584e27e2ecaf4ae7905d099ff&language=en-US&include_adult=false&sort_by=created_at.asc",
     //             "https://api.themoviedb.org/3/genre/" + comedy + "/movies?api_key=3b870b8584e27e2ecaf4ae7905d099ff&language=en-US&include_adult=false&sort_by=created_at.asc"]
 
 
-    // var genres = [action, adventure, animation, comedy, crime, documentary, drama, family, fantasy, history, horror, music, mystery, romance, scienceFiction, thriller, war, western];
-    var genres = [action];
+    var genres = [action, adventure, animation, comedy, crime, documentary, drama, family, fantasy, history, horror, music, mystery, romance, scienceFiction, thriller, war, western];
+
+    // var thing = [];
+    // $('.search').click(function() {
+    //     searchValue = $(this).attr('value');
+    //     thing.push(searchValue);
+    // });
+    //
+    // console.log(thing);
+
+    // var $cool = scienceFiction;
+    // var genres = [];
     var myGenreLength = genres.length;
     var newArray = []
+
 
     for (var i = 0; i < myGenreLength; i++) {
         var url = "https://api.themoviedb.org/3/genre/" + genres[i] + "/movies?api_key=3b870b8584e27e2ecaf4ae7905d099ff&language=en-US&include_adult=false&sort_by=created_at.asc";
         newArray.push(url);
-
     }
+
+    console.log(newArray);
 
     function searchMovie() {
 
@@ -104,7 +123,7 @@ $(document).ready(function() {
               tbody.append(tr);
             }
 
-            $("#results").prepend("<h4>You might be interested in one of these...</h4>")
+            $("#results").prepend("<h4>You might be interested in one of these...</h4>");
 
         }
 
