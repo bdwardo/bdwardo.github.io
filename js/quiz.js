@@ -40,14 +40,14 @@ function generateAll() {
     for (var i = 1; i <= divs.length; i++) {
         a.push(i);
     }
-    console.log("List of divs available to toggle: " + a);
+    // console.log("List of divs available to toggle: " + a);
     return a;
 }
 
 function generateRandomed(all) {
     // Randomizes the original array
     randomed = fisherYates(all);
-    console.log("Setting randomized array: " + randomed);
+    // console.log("Setting randomized array: " + randomed);
     return randomed;
 }
 
@@ -55,15 +55,15 @@ function doNext(all, randomed) {
     $(".lightbox, #last-div").hide();
 
     if (randomed.length < 1) {
-        console.log("All lightboxes toggled, showing last, then starting over");
+        // console.log("All lightboxes toggled, showing last, then starting over");
         $("#last-div").show();
         randomed = generateRandomed(all);
     } else {
         var next = randomed.shift();
         var selector = "#lightbox" + next;
-        console.log("Showing " + selector);
+        // console.log("Showing " + selector);
         $(selector).show();
-        console.log("What's left: " + randomed);
+        // console.log("What's left: " + randomed);
     }
 
     return randomed;
