@@ -32,37 +32,6 @@ $(document).ready(function() {
     var western = 37;
 
 
-
-    // function someFuntion(){
-    //
-
-    // }
-
-
-
-    // var urls = ["https://api.themoviedb.org/3/genre/" + action + "/movies?api_key=3b870b8584e27e2ecaf4ae7905d099ff&language=en-US&include_adult=false&sort_by=created_at.asc",
-    //             "https://api.themoviedb.org/3/genre/" + comedy + "/movies?api_key=3b870b8584e27e2ecaf4ae7905d099ff&language=en-US&include_adult=false&sort_by=created_at.asc"]
-
-
-    // var genres = [action, adventure, animation, comedy, crime, documentary, drama, family, fantasy, history, horror, music, mystery, romance, scienceFiction, thriller, war, western];
-
-    // var thing = [];
-
-    //
-    // console.log(thing);
-
-    // var $cool = scienceFiction;
-
-    // var genres = [];
-    // var myGenreLength = genres.length;
-    // var newArray = []
-    // console.log(genres);
-    //
-    // for (var i = 0; i < myGenreLength; i++) {
-    //     var url = "https://api.themoviedb.org/3/genre/" + genres[i] + "/movies?api_key=3b870b8584e27e2ecaf4ae7905d099ff&language=en-US&include_adult=false&sort_by=created_at.asc";
-    //     newArray.push(url);
-    // }
-
     function searchMovie() {
 
         genreValue = $(this).val();
@@ -76,13 +45,29 @@ $(document).ready(function() {
             genreValue = 37;
         }
 
+        if (genreValue === 'drama') {
+            genreValue = 18;
+        }
+
+        if (genreValue === 'fantasy') {
+            genreValue = 14;
+        }
+
+        if (genreValue === 'romance') {
+            genreValue = 10749;
+        }
+
+        if (genreValue === 'adventure') {
+            genreValue = 12;
+        }
+
+        if (genreValue === 'comedy') {
+            genreValue = 35;
+        }
+
         var url = "https://api.themoviedb.org/3/genre/" + genreValue + "/movies?api_key=3b870b8584e27e2ecaf4ae7905d099ff&language=en-US&include_adult=false&sort_by=created_at.asc";
 
         newArray.push(url);
-
-
-        // genres.push(genreValue);
-        // console.log(genres);
 
 
         tbody.empty();
@@ -91,8 +76,6 @@ $(document).ready(function() {
         $.each(newArray, function( i, value ) {
 
           $.ajax({
-                // url: "https://api.themoviedb.org/3/search/movie?api_key=3b870b8584e27e2ecaf4ae7905d099ff&query=" + term,
-                // url: "https://api.themoviedb.org/3/genre/movie/list?api_key=3b870b8584e27e2ecaf4ae7905d099ff&language=en-US",
                 url: value,
                 dataType: "jsonp",
                 success: renderMoviesTemplate
@@ -101,22 +84,7 @@ $(document).ready(function() {
         });
 
 
-
-
-        // $.ajax({
-        //       url: "https://api.themoviedb.org/3/search/movie?api_key=3b870b8584e27e2ecaf4ae7905d099ff&query=" + term,
-        //       url: "https://api.themoviedb.org/3/genre/movie/list?api_key=3b870b8584e27e2ecaf4ae7905d099ff&language=en-US",
-        //       url: "https://api.themoviedb.org/3/genre/" + action + "/movies?api_key=3b870b8584e27e2ecaf4ae7905d099ff&language=en-US&include_adult=false&sort_by=created_at.asc",
-        //            "https://api.themoviedb.org/3/genre/" + comedy + "/movies?api_key=3b870b8584e27e2ecaf4ae7905d099ff&language=en-US&include_adult=false&sort_by=created_at.asc",
-        //       dataType: "jsonp",
-        //       success: renderMoviesTemplate
-        // });
-
         function renderMoviesTemplate(movies) {
-
-          console.log(movies);
-
-          // tbody.empty();
 
           var movieGenres = movies.results;
           movieGenres.splice(3,17);
@@ -126,20 +94,14 @@ $(document).ready(function() {
               var movie = movieGenres[i];
               var genre = movie.original_title;
               var poster = movie.poster_path;
-
               var tr = template.clone();
 
-              // tr.find(".movieTitle")
-              //     .html(genre);
-
               tr.find(".moviePoster")
-                  .attr("src",  "http://image.tmdb.org/t/p/w342/" + poster);
-
+                  .attr("src",  "http://image.tmdb.org/t/p/w342/" + poster).fadeIn('slow');
 
               tbody.append(tr);
 
             }
-
 
         }
 
