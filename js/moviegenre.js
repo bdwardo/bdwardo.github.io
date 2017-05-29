@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $("#search").click(searchMovie);
+    $('.search').click(searchMovie);
     var table = $("#results");
     var tbody = $("#container");
     var template = $("#template").clone();
@@ -49,6 +49,8 @@ $(document).ready(function() {
             });
 
         });
+
+
 
         function renderMoviesTemplate(movies) {
 

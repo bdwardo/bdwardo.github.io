@@ -161,7 +161,7 @@
                 <div class="hide">
                   <div class="container"></div>
                     <div id="lightbox1" class="lightbox">
-                        <div class="top question1">
+                        <!-- <div class="top question1">
                             <h1>Question #1</h1>
                             <label><input type="radio" name="example1" value="lover"><span></span> Lover</label>
                             <label><input type="radio" name="example1" value="fighter"><span></span> Fighter</label>
@@ -206,19 +206,8 @@
                                   </div>
                                 </div>
                             </div>
-                            <!-- <div class="conditional" data-cond-option="example3" data-cond-value="scifi-nerd">
-                            <h4>You might be interested in one of these...</h4>
-                            <a href="#" class="movie-detail"><img src="https://image.tmdb.org/t/p/original/m0UDkSPoVkmNfXFR9FN13yewy4B.jpg" /></a>
-                            <a href="#" class="movie-detail"><img src="https://image.tmdb.org/t/p/original/vZpB8ezB1IqpxI9rx553TuGwDzJ.jpg" /></a>
-                            <a href="#" class="movie-detail"><img src="https://image.tmdb.org/t/p/original/gynBNzwyaHKtXqlEKKLioNkjKgN.jpg" /></a>
-                            </div>
-                            <div class="conditional" data-cond-option="example3" data-cond-value="scifi-comedy">
-                            <h4>We know you'll wanna watch one of these...</h4>
-                            <a href="#" class="movie-detail"><img src="https://image.tmdb.org/t/p/original/pTpxQB1N0waaSc3OSn0e9oc8kx9.jpg" /></a>
-                            <a href="#" class="movie-detail"><img src="https://image.tmdb.org/t/p/original/fOb4cJMhnZ11BoHNUii3Vcfo3XU.jpg" /></a>
-                            <a href="#" class="movie-detail"><img src="https://image.tmdb.org/t/p/original/l9hrvXyGq19f6jPRZhSVRibTMwW.jpg" /></a>
-                            </div> -->
-                        </div>
+                        </div> -->
+
                         <div class="conditional" data-cond-option="example1" data-cond-value="action">
                             <p>Interesting. Which would you have lunch with?</p>
                             <label><input type="radio" name="example4" value="action-drama"><span></span> Denzel</label>
@@ -244,9 +233,32 @@
                 <div id="last-div">
                 This is the last div!
                 </div>
+                <div class="conditional">
+                    <div>
+                    <h1>The Question #1</h1>
+                    <label><input type="radio" name="example3" value="western" class="search"><span></span> Pepsi</label>
+                    <label><input type="radio" name="example3" value="scifi-comedy"><span></span> Coca Cola</label>
+                    </div>
+
+                </div>
+                <div class="conditional">
+                    <div>
+                    <h1>The Question #2</h1>
+                    <label><input type="radio" name="example3" value="scienceFiction" class="search"><span></span> Sprite</label>
+                    <label><input type="radio" name="example3" value="scifi-comedy"><span></span> Mountain Dew</label>
+                    </div>
+                </div>
+                <div id="results">
+                    <div id="container" class="poster-container">
+                      <div id="template">
+                          <a href="#" class="poster movie-detail"><img src="" class="moviePoster overlay"/></a>
+                      </div>
+                    </div>
+                </div>
                 <div class="button-container">
                     <a href="#" id="generator" class="button is-large is-primary">Let's go again</a>
                 </div>
+
 
               <!-- <h1>Conditional form using jQuery</h1>
 

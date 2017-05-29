@@ -5,7 +5,8 @@ $(document).ready(function() {
     //
     // });
 
-    $("#search").click(searchMovie);
+
+    $('.search').click(searchMovie);
     var table = $("#results");
     var tbody = $("#container");
     var template = $("#template").clone();
@@ -51,22 +52,34 @@ $(document).ready(function() {
 
     // var $cool = scienceFiction;
 
-    var genres = [scienceFiction];
-    var myGenreLength = genres.length;
-    var newArray = []
-    console.log(genres);
-
-    for (var i = 0; i < myGenreLength; i++) {
-        var url = "https://api.themoviedb.org/3/genre/" + genres[i] + "/movies?api_key=3b870b8584e27e2ecaf4ae7905d099ff&language=en-US&include_adult=false&sort_by=created_at.asc";
-        newArray.push(url);
-    }
+    // var genres = [];
+    // var myGenreLength = genres.length;
+    // var newArray = []
+    // console.log(genres);
+    //
+    // for (var i = 0; i < myGenreLength; i++) {
+    //     var url = "https://api.themoviedb.org/3/genre/" + genres[i] + "/movies?api_key=3b870b8584e27e2ecaf4ae7905d099ff&language=en-US&include_adult=false&sort_by=created_at.asc";
+    //     newArray.push(url);
+    // }
 
     function searchMovie() {
 
-        // genreValue = $(this).val();
-        // if (genreValue == 'scienceFiction') {
-        //     genreValue = 878;
-        // }
+        genreValue = $(this).val();
+        var newArray = []
+
+        if (genreValue === 'scienceFiction') {
+            genreValue = 878;
+        }
+
+        if (genreValue === 'western') {
+            genreValue = 37;
+        }
+
+        var url = "https://api.themoviedb.org/3/genre/" + genreValue + "/movies?api_key=3b870b8584e27e2ecaf4ae7905d099ff&language=en-US&include_adult=false&sort_by=created_at.asc";
+
+        newArray.push(url);
+
+
         // genres.push(genreValue);
         // console.log(genres);
 
