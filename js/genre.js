@@ -6,6 +6,7 @@ $(document).ready(function() {
     // });
 
 
+
     $('.search').click(searchMovie);
     var table = $("#results");
     var tbody = $("#container");
@@ -136,9 +137,9 @@ $(document).ready(function() {
 
 
               tbody.append(tr);
+
             }
 
-            $("#results").prepend("<h4>You might be interested in one of these...</h4>");
 
         }
 

@@ -158,24 +158,24 @@
         </nav>
         <div class="container">
             <div id="app" class="inner-container">
-                <div class="hide">
-                  <div class="container"></div>
+                <div class="hide lightboxes">
+                  <!-- <div class="container"></div> -->
                     <div id="lightbox1" class="lightbox">
-                        <!-- <div class="top question1">
+                        <div class="top question1">
                             <h1>Question #1</h1>
                             <label><input type="radio" name="example1" value="lover"><span></span> Lover</label>
-                            <label><input type="radio" name="example1" value="fighter"><span></span> Fighter</label>
+                            <label><input type="radio" name="example1" value="lover"><span></span> Fighter</label>
                         </div>
                         <div class="conditional question2" data-cond-option="example1" data-cond-value="lover">
                             <h1>Question #2</h1>
                             <label><input type="radio" name="example2" value="yes"><span></span> The passionate kind</label>
-                            <label><input type="radio" name="example2" value="no"><span></span> The sensitive kind</label>
+                            <label><input type="radio" name="example2" value="yes"><span></span> The sensitive kind</label>
                         </div>
                         <div class="conditional" data-cond-option="example2" data-cond-value="yes">
                             <div class="question3">
                             <h1>Question #</h1>
-                            <label><input type="radio" name="example3" value="yes"><span></span> Quirky and awkward</label>
-                            <label><input type="radio" name="example3" value="no"><span></span> Cool and collected</label>
+                            <label><input type="radio" name="example3" value="scienceFiction" class="search"><span></span> Quirky and awkward</label>
+                            <label><input type="radio" name="example3" value="western" class="search"><span></span> Cool and collected</label>
                           </div>
                         </div>
                         <div class="conditional" data-cond-option="example6" data-cond-value="yay">
@@ -190,23 +190,16 @@
                         </div>
                         <div class="conditional question2" data-cond-option="example1" data-cond-value="scifi">
                             <h1>The Question #2</h1>
-                            <label><input type="radio" name="example2" value="scifi"><span></span> Star Wars</label>
-                            <label><input type="radio" name="example2" value="scifi"><span></span> Bill and Ted's Excellent Adventure</label>
+                            <label><input type="radio" name="example2" value="last"><span></span> Star Wars</label>
+                            <label><input type="radio" name="example2" value="last"><span></span> Bill and Ted's Excellent Adventure</label>
                         </div>
-                        <div class="conditional" data-cond-option="example2" data-cond-value="scifi">
+                        <div class="conditional" data-cond-option="example2" data-cond-value="last">
                             <div class="question3">
-                            <h1>The Question #2</h1>
-                            <label><input type="radio" name="example3" value="scifi" id="search"><span></span> Pepsi</label>
-                            <label><input type="radio" name="example3" value="scifi-comedy"><span></span> Coca Cola</label>
+                            <h1>The Question #3</h1>
+                            <label><input type="radio" name="example3" value="scienceFiction" class="search"><span></span> Pepsi</label>
+                            <label><input type="radio" name="example3" value="western" class="search"><span></span> Coca Cola</label>
                             </div>
-                            <div id="results">
-                                <div id="container" class="poster-container">
-                                  <div id="template">
-                                      <a href="#" class="poster movie-detail"><img src="" class="moviePoster overlay"/></a>
-                                  </div>
-                                </div>
-                            </div>
-                        </div> -->
+                        </div>
 
                         <div class="conditional" data-cond-option="example1" data-cond-value="action">
                             <p>Interesting. Which would you have lunch with?</p>
@@ -229,11 +222,21 @@
                         Works with text input
                         </div>
                     </div>
+                    <div id="results">
+                        <div id="container" class="poster-container">
+                          <div id="template">
+                              <a href="#" class="poster movie-detail"><img src="" class="moviePoster overlay"/></a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <a href="#" id="generator" class="button is-large is-primary">Let's go again</a>
                 </div>
                 <div id="last-div">
                 This is the last div!
                 </div>
-                <div class="conditional">
+                <!-- <div class="conditional">
                     <div>
                     <h1>The Question #1</h1>
                     <label><input type="radio" name="example3" value="western" class="search"><span></span> Pepsi</label>
@@ -247,17 +250,9 @@
                     <label><input type="radio" name="example3" value="scienceFiction" class="search"><span></span> Sprite</label>
                     <label><input type="radio" name="example3" value="scifi-comedy"><span></span> Mountain Dew</label>
                     </div>
-                </div>
-                <div id="results">
-                    <div id="container" class="poster-container">
-                      <div id="template">
-                          <a href="#" class="poster movie-detail"><img src="" class="moviePoster overlay"/></a>
-                      </div>
-                    </div>
-                </div>
-                <div class="button-container">
-                    <a href="#" id="generator" class="button is-large is-primary">Let's go again</a>
-                </div>
+                </div> -->
+
+
 
 
               <!-- <h1>Conditional form using jQuery</h1>
@@ -316,6 +311,7 @@
 <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script> -->
 <!-- <script src="js/moviedb.js"></script> -->
 <script src="js/genre.js"></script>
+<script src="js/setgenre.js"></script>
 <script src="js/quiz.js"></script>
 <script src="js/conditionize.jquery.js"></script>
 <!-- <script src="js/qa.js"></script> -->
