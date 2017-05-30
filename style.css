@@ -4062,20 +4062,20 @@ input[type=text] {
   font-color: #666;
   font-size: 15px; }
 
-.conditional img {
-  max-height: 100%;
-  max-width: 350px;
-  width: 100%;
-  display: inline-block;
-  position: relative;
-  border-radius: 4px; }
-
 .conditional h4, .poster-container h4 {
   padding-bottom: 1em; }
-.conditional a.movie-detail img:hover, .poster-container a.movie-detail img:hover {
-  box-shadow: 0px 0px 20px 4px rgba(240, 39, 85, 0.5);
-  transform: scale(1.1);
-  transition: all 0.3s; }
+.conditional a.movie-detail, .poster-container a.movie-detail {
+  display: block;
+  background: #f02654;
+  border-radius: 4px; }
+  .conditional a.movie-detail img, .poster-container a.movie-detail img {
+    display: block !important;
+    border-radius: 4px;
+    transition: all 0.3s; }
+    .conditional a.movie-detail img:hover, .poster-container a.movie-detail img:hover {
+      box-shadow: 0px 0px 20px 4px rgba(240, 39, 85, 0.5);
+      opacity: 0.4;
+      transition: all 0.3s; }
 
 .poster-container {
   display: table;
