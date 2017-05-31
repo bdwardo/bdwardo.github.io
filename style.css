@@ -4005,16 +4005,19 @@ h1 {
   padding: 0 3em;
   background: transparent;
   margin: 0 auto;
-  font: 24px/30px 'Roboto', Arial, Verdana, serif; }
+  font: 2em/30px 'Roboto', Arial, Verdana, serif; }
 
 label {
-  color: white;
+  color: #f02654;
   vertical-align: middle;
   position: relative;
-  padding-left: 0.5em; }
+  display: block;
+  margin: 1.5em 0; }
+  label:hover {
+    cursor: pointer; }
 
-label + label {
-  margin-left: 1em; }
+input[type=radio] {
+  display: none; }
 
 input + span {
   position: absolute;
@@ -4022,7 +4025,8 @@ input + span {
   top: 2px;
   width: 24px;
   height: 24px;
-  border: 2px solid #f02654; }
+  border: 2px solid #f02654;
+  display: none; }
 
 input[type=radio] + span {
   border-radius: 50%; }
@@ -4101,4 +4105,10 @@ input[type=text] {
   nav {
     background-color: #f02654; }
     nav .logo {
-      padding: 0.25em; } }
+      padding: 0.25em; }
+
+  .container {
+    margin-top: 3em; } }
+@media all and (min-width: 480px) {
+  h1 {
+    font-size: 4rem; } }
