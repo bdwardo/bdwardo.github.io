@@ -162,18 +162,28 @@ h1 {
   padding: 0 3em;
   background: transparent;
   margin: 0 auto;
-  font: 24px/30px 'Roboto', Arial, Verdana, serif;
+  font: 2em/30px 'Roboto', Arial, Verdana, serif;
 }
 
 label {
-  color: $white;
+  color: $red;
   vertical-align: middle;
   position: relative;
-  padding-left: 0.5em;
+  display: block;
+  margin: 1.5em 0;
+  // padding-left: 0.5em;
+
+  &:hover {
+      cursor: pointer;
+  }
 }
 
-label + label {
-  margin-left: 1em;
+// label + label {
+//   margin-left: 1em;
+// }
+
+input[type=radio] {
+    display: none;
 }
 
 input + span{
@@ -183,6 +193,7 @@ input + span{
 	width: 24px;
 	height: 24px;
   border: 2px solid $red;
+  display: none;
 }
 
 input[type=radio] + span {
@@ -290,6 +301,18 @@ input[type=text] {
         .logo {
             padding: 0.25em;
         }
+    }
+
+    .container {
+        margin-top: 3em;
+    }
+
+}
+
+@media all and (min-width: 480px) {
+
+    h1 {
+        font-size: 4rem;
     }
 
 }
