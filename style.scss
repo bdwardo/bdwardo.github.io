@@ -12,6 +12,8 @@ $border-radius-sm: 4px;
 html, body {
     margin: 0 auto;
     height: 100%;
+    font-family: 'Roboto', Helvetica, sans-serif;
+
 }
 
 nav {
@@ -43,13 +45,56 @@ a.footer-links {
   min-height: 100%;
 }
 
+.intro-overlay {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 100;
+    overflow: hidden;
+
+    .intro-content {
+        text-align: center;
+        max-width: 600px;
+        margin: 16% auto;
+
+        h3 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin: 1em;
+        }
+
+        a {
+            font-size: 1.6rem;
+            transition: all 0.3s;
+            // color: $red;
+
+            &:hover {
+                box-shadow: 0 10px 24px -2px rgba($red,0.3);
+                transition: all 0.3s;
+            }
+        }
+    }
+}
+
+.get-started {
+    display: none;
+}
+
 .bg {
-    background: url('img/bg.gif');
-    background-repeat: no-repeat;
+    background: url('img/bg.gif') no-repeat center / cover,
+                linear-gradient(#000, #000);
     margin: 0 auto ;
     height: 100vh;
-    background-size: cover;
     overflow: hidden;
+}
+
+svg {
+    transform: scale(1);
+    transition: all 0.3s;
 }
 
 svg:hover {
@@ -97,12 +142,14 @@ h4 {
     color: $red;
     margin: 2em 1em;
     background-color: $red;
+    transition: all 0.3s;
+
     &:hover {
         color: $red;
         box-shadow: 0px 0px 20px 4px rgba(255,255,255,0.3);
         background-color: $white;
         transform: translateY(-2px);
-        transition: transform 0.2s ease-in-out;
+        transition: transform 0.3s ease-in-out;
     }
 }
 
@@ -113,7 +160,8 @@ h4 {
       border-radius: 10px;
       font-weight: bold;
       &:hover {
-          box-shadow: 0px 0px 20px 4px rgba(240,39,85,0.5);
+          // box-shadow: 0px 0px 20px 4px rgba(240,39,85,0.5);
+          box-shadow: 0 10px 24px -2px rgba($red,0.3);
           background-color: $red;
       }
       &:focus {
@@ -162,11 +210,12 @@ h1 {
   padding: 0 3em;
   background: transparent;
   margin: 0 auto;
-  font: 2em/30px 'Roboto', Arial, Verdana, serif;
+  font: 3em/30px 'Roboto', Arial, Verdana, serif;
 }
 
 label {
   color: $red;
+  font-weight: 900;
   vertical-align: middle;
   position: relative;
   display: block;
@@ -174,6 +223,7 @@ label {
   // padding-left: 0.5em;
 
   &:hover {
+      text-shadow: 0 0 40px rgba($red, 0.8);
       cursor: pointer;
   }
 }
@@ -279,6 +329,46 @@ input[type=text] {
     display: none;
 }
 
+//
+// * Animations *
+//
+@-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+.fade-in {
+  	opacity:0;
+  	-webkit-animation:fadeIn ease-in 1;
+  	-moz-animation:fadeIn ease-in 1;
+  	animation:fadeIn ease-in 1;
+
+  	-webkit-animation-fill-mode:forwards;
+  	-moz-animation-fill-mode:forwards;
+  	animation-fill-mode:forwards;
+
+  	-webkit-animation-duration:1s;
+  	-moz-animation-duration:1s;
+  	animation-duration:1s;
+}
+
+@mixin animation-delay($time) {
+    -webkit-animation-delay: $time;
+    -moz-animation-delay: $time;
+    animation-delay: $time;
+}
+
+.fade-in.one {
+    @include animation-delay(0.4s);
+}
+
+.fade-in.two {
+    @include animation-delay(0.6s);
+}
+
+.fade-in.three {
+    @include animation-delay(0.8s);
+}
+
 
 @media all and (max-width: 480px) {
 
@@ -305,6 +395,14 @@ input[type=text] {
 
     .container {
         margin-top: 3em;
+    }
+
+    .lightbox {
+        font-size: 2em;
+    }
+
+    .intro-overlay .intro-content h3 {
+        font-size: 1.6rem;
     }
 
 }

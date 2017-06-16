@@ -6,6 +6,13 @@ $(document).ready(function() {
     // });
 
 
+    $('#get-started').click(function() {
+        $('.intro-overlay').fadeOut(500, function() {
+            this.addClass('get-started');
+        });
+    });
+
+
 
     $('.search').click(searchMovie);
     var table = $("#results");
