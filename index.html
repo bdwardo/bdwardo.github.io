@@ -111,8 +111,8 @@
           C186.457,31.492,188.255,32.477,188.255,32.477z"/>
           </g>
           </svg>
-        <h3 class="fade-in two">...for those in search of the perfect movie to match their perplexed mind.</h3>
-        <a href="#" class="button is-primary fade-in two" id="get-started">Start feelin'</a>
+        <h3 class="fade-in two">What should we watch tonight?</h3>
+        <a href="#" class="button is-primary fade-in two" id="get-started">Get started</a>
         </div>
     </div>
     <div class="bg">
@@ -267,13 +267,13 @@
                         <div class="conditional questions question2" data-cond-option="example1" data-cond-value="lover">
                             <h1>What's your general mood?</h1>
                             <label><input type="radio" name="example2" value="yes"><span></span> Exploratory</label>
-                            <label><input type="radio" name="example2" value="yes"><span></span> Need more wine</label>
+                            <label><input type="radio" name="example2" value="yes"><span></span> Deep in thought</label>
                         </div>
                         <div class="conditional" data-cond-option="example2" data-cond-value="yes">
                             <div class="questions question3">
                             <h1>Where's your head at?</h1>
                             <label><input type="radio" name="example3" value="fantasy" class="search"><span></span> In the clouds</label>
-                            <label><input type="radio" name="example3" value="romance" class="search"><span></span> Need wine now</label>
+                            <label><input type="radio" name="example3" value="romance" class="search"><span></span> Where's the wine?</label>
                           </div>
                         </div>
                         <div class="conditional" data-cond-option="example6" data-cond-value="yay">
@@ -294,8 +294,8 @@
                         <div class="conditional" data-cond-option="example2" data-cond-value="last">
                             <div class="questions question3">
                             <h1>I would rather...</h1>
-                            <label><input type="radio" name="example3" value="scienceFiction" class="search"><span></span> Play video games</label>
-                            <label><input type="radio" name="example3" value="western" class="search"><span></span> Read a classic novel</label>
+                            <label><input type="radio" name="example3" value="mystery" class="search"><span></span> Play video games</label>
+                            <label><input type="radio" name="example3" value="drama" class="search"><span></span> Read a classic novel</label>
                             </div>
                         </div>
                         <div class="conditional" data-cond-option="example6" data-cond-value="yay">
@@ -326,20 +326,42 @@
                     </div>
                     <div id="lightbox4" class="lightbox">
                         <div class="top questions question1">
-                            <h1>The Question #1</h1>
-                            <label><input type="radio" name="example1" value="scifi"><span></span> Dogs</label>
-                            <label><input type="radio" name="example1" value="scifi"><span></span> Cats</label>
+                            <h1>Which are you?</h1>
+                            <label><input type="radio" name="example1" value="scifi"><span></span> Dog person</label>
+                            <label><input type="radio" name="example1" value="scifi"><span></span> Cat lady (person)</label>
                         </div>
                         <div class="conditional questions question2" data-cond-option="example1" data-cond-value="scifi">
-                            <h1>The Question #2</h1>
+                            <h1>I'd rather have a... </h1>
                             <label><input type="radio" name="example2" value="last"><span></span> Pizza</label>
                             <label><input type="radio" name="example2" value="last"><span></span> Burrito</label>
                         </div>
                         <div class="conditional" data-cond-option="example2" data-cond-value="last">
                             <div class="questions question3">
-                            <h1>The Question #3</h1>
-                            <label><input type="radio" name="example3" value="scienceFiction" class="search"><span></span> Mountains</label>
-                            <label><input type="radio" name="example3" value="western" class="search"><span></span> Beach</label>
+                            <h1>Where would you vacation?</h1>
+                            <label><input type="radio" name="example3" value="thriller" class="search"><span></span> Alaska</label>
+                            <label><input type="radio" name="example3" value="romance" class="search"><span></span> Hawaii</label>
+                            </div>
+                        </div>
+                        <div class="conditional" data-cond-option="example6" data-cond-value="yay">
+                        Works with text input
+                        </div>
+                    </div>
+                    <div id="lightbox5" class="lightbox">
+                        <div class="top questions question1">
+                            <h1>The better pants...</h1>
+                            <label><input type="radio" name="example1" value="romance"><span></span> Sweats</label>
+                            <label><input type="radio" name="example1" value="romance"><span></span> Jeans</label>
+                        </div>
+                        <div class="conditional questions question2" data-cond-option="example1" data-cond-value="romance">
+                            <h1>I'm more of a... </h1>
+                            <label><input type="radio" name="example2" value="last"><span></span> Couch person</label>
+                            <label><input type="radio" name="example2" value="last"><span></span> Bar hopper</label>
+                        </div>
+                        <div class="conditional" data-cond-option="example2" data-cond-value="last">
+                            <div class="questions question3">
+                            <h1>What music do you play most?</h1>
+                            <label><input type="radio" name="example3" value="western" class="search"><span></span> Country</label>
+                            <label><input type="radio" name="example3" value="crime" class="search"><span></span> Rock N' ROll</label>
                             </div>
                         </div>
                         <div class="conditional" data-cond-option="example6" data-cond-value="yay">
@@ -349,7 +371,7 @@
                     <div id="results">
                         <div id="container" class="poster-container">
                           <div id="template">
-                              <a href="#" class="poster movie-detail fade-in two"><img src="" class="moviePoster overlay"/></a>
+                              <a href="#" class="poster movie-detail fade-in two"><div><i class="fa fa-film" aria-hidden="true"></i></div><img src="" class="moviePoster overlay"/></a>
                           </div>
                         </div>
                     </div>
@@ -366,7 +388,7 @@
   </div>
     <footer>
           <div>
-          <span>&copy; 2017 Reel Feels</span>
+          <span>&copy; 2018 Reel Feels</span>
           <span>&nbsp;|&nbsp;</span>
           <a class="footer-links" href="mailto:bdwardo@gmail.com">Contact</a>
           <span>&nbsp;|&nbsp;</span>
