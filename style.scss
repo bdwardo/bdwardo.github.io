@@ -1,4 +1,6 @@
 @import "node_modules/bulma/bulma";
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css');
+
 
 $red: #f02654;
 $yellow: #ffb32c;
@@ -70,7 +72,6 @@ a.footer-links {
         a {
             font-size: 1.6rem;
             transition: all 0.3s;
-            // color: $red;
 
             &:hover {
                 box-shadow: 0 10px 24px -2px rgba($red,0.3);
@@ -299,6 +300,20 @@ input[type=text] {
         display: block;
         background: $red;
         border-radius: $border-radius-sm;
+
+        div {
+            color: #fff;
+            font-size: 2rem;
+            position: absolute;
+            padding-left: 20px;
+            padding-top: 20px;
+            visibility: hidden;
+            z-index: 100;
+        }
+
+        &:hover div {
+            visibility: visible;
+        }
 
         img {
             display: block !important;
